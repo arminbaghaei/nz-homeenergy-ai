@@ -11,6 +11,6 @@ def show():
         st.session_state["df"] = df
     else:
         st.info("Or use the sample data below")
-        sample_df = pd.read_csv("data/sample_energy_data.csv")
+sample_df = pd.read_csv("sample_energy_data.csv")
         st.dataframe(sample_df.head())
         st.session_state["df"] = sample_df
