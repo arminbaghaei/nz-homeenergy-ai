@@ -1,6 +1,9 @@
 
 import streamlit as st
-from app import home, upload_data, model_train, predict
+import home
+import upload_data
+import model_train
+import predict
 
 st.set_page_config(page_title="NZ HomeEnergy AI", layout="wide")
 st.sidebar.title("🏠 NZ HomeEnergy AI")
