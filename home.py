@@ -1,7 +1,15 @@
 import streamlit as st
+import os
 
 def show():
-    st.image("logo/logo.png", width=100)
+    # ✅ Load logo safely
+    logo_path = "logo.png"
+    if os.path.exists(logo_path):
+        st.image(logo_path, width=100)
+    else:
+        st.warning("⚠️ Logo image not found. Please ensure 'logo.png' is in the root directory.")
+
+    # ✅ App title and description
     st.title("🏡 NZ HomeEnergy AI")
     st.markdown("""
     Welcome to **NZ HomeEnergy AI** – an advanced ML-powered tool to help understand and predict **household energy use in New Zealand**.
