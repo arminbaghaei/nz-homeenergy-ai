@@ -1,7 +1,7 @@
 import streamlit as st
 
 def show():
-    st.image("logo.png", width=100)  # Ensure logo.png is in root folder
+    st.image("logo/logo.png", width=100)
     st.title("🏡 NZ HomeEnergy AI")
     st.markdown("""
     Welcome to **NZ HomeEnergy AI** – an advanced ML-powered tool to help understand and predict **household energy use in New Zealand**.
