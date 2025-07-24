@@ -1,22 +1,15 @@
 import streamlit as st
+import home  # This assumes your file is named home.py
 
-def show():
-    st.title("🏡 NZ HomeEnergy AI")
-    st.markdown("""
-    Welcome to NZ HomeEnergy AI – an advanced ML-powered tool to help understand and predict household energy use in New Zealand.
-    
-    Use the sidebar to navigate between pages:
-    - Upload your data
-    - Train predictive models
-    - Evaluate household energy performance
+def main():
+    st.set_page_config(page_title="NZ HomeEnergy AI", layout="wide")
 
-    ---
-    ### 🌱 Aligned with UN Sustainable Development Goals (SDGs)
-    This tool supports:
-    - **SDG 7**: Affordable and Clean Energy  
-    - **SDG 11**: Sustainable Cities and Communities  
-    - **SDG 12**: Responsible Consumption and Production  
-    - **SDG 13**: Climate Action  
+    # Optional: sidebar navigation if you plan to add more pages later
+    st.sidebar.title("📂 Navigation")
+    page = st.sidebar.radio("Select a page", ["Home"])
 
-    By using this tool, users gain insights into energy usage and learn how to reduce carbon footprints at the household level.
-    """)
+    if page == "Home":
+        home.show()
+
+if __name__ == "__main__":
+    main()
