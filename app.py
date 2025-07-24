@@ -1,15 +1,22 @@
 import streamlit as st
-import home  # This assumes your file is named home.py
+import home
+import upload_data
+import model_train
+import predict
+
+PAGES = {
+    "🏠 Home": home,
+    "📤 Upload Data": upload_data,
+    "🧠 Train Model": model_train,
+    "📈 Predict": predict
+}
 
 def main():
     st.set_page_config(page_title="NZ HomeEnergy AI", layout="wide")
-
-    # Optional: sidebar navigation if you plan to add more pages later
     st.sidebar.title("📂 Navigation")
-    page = st.sidebar.radio("Select a page", ["Home"])
-
-    if page == "Home":
-        home.show()
+    selection = st.sidebar.radio("Select a page", list(PAGES.keys()))
+    page = PAGES[selection]
+    page.show()
 
 if __name__ == "__main__":
     main()
