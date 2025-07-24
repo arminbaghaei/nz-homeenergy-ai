@@ -1,17 +1,12 @@
 import streamlit as st
 
 def show():
-    st.set_page_config(page_title="NZ HomeEnergy AI", layout="wide")
-
-    # Header with logo (optional: replace logo file path)
-    col1, col2 = st.columns([1, 6])
-    with col1:
-        st.image("https://upload.wikimedia.org/wikipedia/commons/3/3c/Flag_of_New_Zealand.svg", width=70)
-    with col2:
-        st.title("🏡 NZ HomeEnergy AI")
-
+    st.image("logo.png", width=100)  # Your uploaded logo
+    st.title("🏡 NZ HomeEnergy AI")
     st.markdown("""
-Welcome to **NZ HomeEnergy AI** – an advanced ML-powered tool to help understand and predict **household energy use in New Zealand**.
+    Welcome to NZ HomeEnergy AI – an advanced ML-powered tool to help understand and predict household energy use in New Zealand.
+    ...
+    """)
 
 ---
 
